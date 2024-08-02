@@ -4,7 +4,7 @@
 	--soft-orange: hsl(35, 77%, 62%);
 	--soft-red: hsl(5, 85%, 63%);
 
-	--off-white: hsl(36, 100%, 99%);
+	--off-white: hsl(34, 100%, 99%);
 	--white: hsl(100, 100%, 100%);
 	--grayish-blue: hsl(233, 8%, 79%);
 	--dark-grayishblue: hsl(236, 13%, 42%);
@@ -227,10 +227,14 @@ select {
 .product-card {
 	max-width: 300px;
 	width: auto;
-	box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+	background-color: var(--white);
+	box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
 	border-radius: 0.5rem;
 	cursor: pointer;
 	overflow: hidden;
+}
+.product-card:hover {
+	box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
 }
 .product-title {
 	font-size: var(--fs-500);
