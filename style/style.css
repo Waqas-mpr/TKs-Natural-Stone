@@ -1,0 +1,405 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+
+:root {
+	--soft-orange: hsl(35, 77%, 62%);
+	--soft-red: hsl(5, 85%, 63%);
+
+	--off-white: hsl(36, 100%, 99%);
+	--white: hsl(100, 100%, 100%);
+	--grayish-blue: hsl(233, 8%, 79%);
+	--dark-grayishblue: hsl(236, 13%, 42%);
+	--very-dark-blue: hsl(240, 100%, 5%);
+
+	--ff-inter: "Inter", sans-serif;
+
+	--fw-300: 300;
+	--fw-400: 400;
+	--fw-500: 500;
+	--fw-600: 600;
+	--fw-700: 700;
+	--fw-800: 800;
+
+	--fs-300: 0.75rem;
+	--fs-400: 0.9rem;
+	--fs-500: 1rem;
+	--fs-600: 1.15rem;
+	--fs-700: 1.35rem;
+	--fs-800: 1.75rem;
+	--fs-900: 2.35rem;
+
+	--section-height: 42rem;
+	--padding-container: 9.5rem;
+
+	--gap: 3.5rem;
+}
+
+/*--------------------------*/
+/*  Reset                   */
+/*--------------------------*/
+
+/* https://piccalil.li/blog/a-modern-css-reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul,
+li {
+	margin: 0;
+	padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+	list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+	background-color: var(--white);
+	color: var(--very-dark-blue);
+	min-height: 100vh;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+	font-family: var(--ff-inter);
+	font-size: 18px;
+	font-weight: var(--fw-500);
+	overflow-x: hidden;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+svg,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/*-------------------------------*/
+/*  General 		 			*/
+/*------------------------------*/
+.body-container {
+	margin: auto;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	background-color: var(--white);
+	justify-content: space-between;
+	padding-inline: 10rem;
+	padding-block: 2rem;
+	position: fixed;
+	width: 100%;
+	top: 0;
+
+	z-index: 9999;
+}
+
+.logo {
+	width: 120px;
+	min-width: 100px;
+}
+.navbar {
+	display: flex;
+	gap: var(--gap);
+	list-style: none;
+}
+.navbar li a {
+	color: var(--very-dark-blue);
+	font-size: var(--fs-600);
+	font-weight: var(--fw-600);
+	letter-spacing: 0.075rem;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.navbar li {
+	padding-block: 1rem;
+}
+.active > a {
+	color: var(--soft-red) !important;
+}
+
+.navbar li a:hover {
+	color: var(--soft-red);
+	cursor: pointer;
+}
+
+.category-section {
+	margin-inline: auto;
+	margin-block-start: 8rem;
+	background: var(--very-dark-blue);
+	padding-block: 1rem;
+}
+
+.category-navbar {
+	display: flex;
+	gap: 1.25rem;
+	list-style: none;
+	justify-content: center;
+}
+
+.category-navbar li a {
+	color: var(--white);
+	text-decoration: none;
+
+	font-size: var(--fs-500);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+.category-navbar li {
+	padding-inline: 1rem;
+	padding-block: 0.75rem;
+}
+
+.category-navbar li a:hover {
+	cursor: pointer;
+	border-bottom: 1px solid;
+	border-bottom-color: var(--white);
+}
+
+.products-section {
+	margin-inline: 10rem;
+	margin-block: 3.5rem;
+}
+.products {
+	display: flex;
+	flex-flow: row wrap;
+	align-content: start;
+	justify-content: center;
+	width: auto;
+	gap: 2.25rem;
+}
+
+.padding {
+	padding: 1.5rem;
+}
+
+.product-card {
+	max-width: 300px;
+	width: auto;
+	box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+	border-radius: 0.5rem;
+	cursor: pointer;
+	overflow: hidden;
+}
+.product-title {
+	font-size: var(--fs-500);
+	line-height: 2;
+}
+
+.product-title:hover {
+	color: var(--soft-orange);
+}
+.product-desc {
+	font-size: var(--fs-300);
+}
+.product-image {
+	width: 100%;
+	min-width: 200px;
+	transition: all 0.3s ease-in;
+}
+.product-image:hover {
+	transform: scale(1.1);
+}
+
+.footer-section {
+	background-color: var(--very-dark-blue);
+	padding: 25px;
+	display: flex;
+	justify-content: center;
+}
+.copywrite {
+	color: var(--white);
+	text-align: center;
+}
+
+/*-------------------------------*/
+/*  Responsive Media Qureries   */
+/*------------------------------*/
+
+@media screen and (min-width: 921px) and (max-width: 1290px) {
+	.header {
+		padding-inline: 3rem;
+	}
+
+	.products-section {
+		margin-inline: 3rem;
+	}
+	.product-card {
+		max-width: 260px;
+	}
+	.products {
+		gap: 1.25rem;
+	}
+}
+
+@media screen and (min-width: 750px) and (max-width: 920px) {
+	.header {
+		padding-inline: 1rem;
+	}
+
+	.products-section {
+		margin-inline: 1rem;
+	}
+	.product-card {
+		max-width: 210px;
+	}
+	.products {
+		gap: 1rem;
+	}
+
+	.navbar {
+		display: none;
+	}
+
+	.header {
+		padding-block: 1.25rem;
+	}
+
+	.category-section {
+		margin-block-start: 5rem;
+		padding-block: 0.75rem;
+	}
+
+	.logo {
+		width: 90px;
+		min-width: 80px;
+	}
+
+	.category-navbar {
+		gap: 0.75rem;
+	}
+
+	.category-navbar li a {
+		font-size: var(--fs-400);
+		font-weight: var(--fw-400);
+		letter-spacing: 0.5px;
+	}
+
+	.product-title {
+		font-size: var(--fs-400);
+		line-height: 1.5;
+	}
+	.navbar li {
+		padding-block: 0;
+	}
+}
+
+@media screen and (min-width: 600px) and (max-width: 749px) {
+	.header {
+		padding-inline: 1rem;
+	}
+
+	.products-section {
+		margin-inline: 1rem;
+	}
+	.product-card {
+		max-width: 220px;
+	}
+	.navbar {
+		display: none;
+	}
+	.category-navbar {
+		display: none;
+	}
+
+	.category-section {
+		padding-block: 3rem;
+		margin-block-start: 5rem;
+	}
+	.products {
+		gap: 0.75rem;
+	}
+	.product-title {
+		font-size: var(--fs-400);
+		line-height: 1.5;
+	}
+	.logo {
+		width: 90px;
+		min-width: 80px;
+	}
+}
+
+@media screen and (min-width: 280px) and (max-width: 599px) {
+	.header {
+		padding-inline: 2rem;
+	}
+
+	.products-section {
+		margin-inline: 2rem;
+	}
+	.product-card {
+		max-width: 400px;
+		display: block;
+	}
+
+	.product-title {
+		font-size: var(--fs-500);
+		line-height: 2;
+	}
+	.navbar {
+		display: none;
+	}
+	.category-navbar {
+		display: none;
+	}
+
+	.category-section {
+		padding-block: 3rem;
+		margin-block-start: 5rem;
+	}
+	.logo {
+		width: 100px;
+		min-width: 80px;
+	}
+}
