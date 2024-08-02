@@ -359,7 +359,7 @@ select {
 	}
 
 	.category-section {
-		padding-block: 2rem;
+		padding-block: 1.5rem;
 		margin-block-start: 4.75rem;
 	}
 	.products {
@@ -400,7 +400,7 @@ select {
 	}
 
 	.category-section {
-		padding-block: 3rem;
+		padding-block: 1.5rem;
 		margin-block-start: 5rem;
 	}
 	.logo {
@@ -411,6 +411,6 @@ select {
 	.copywrite {
 		color: var(--white);
 		text-align: center;
-		font-size: var(--fs-400);
+		font-size: var(--fs-300);
 	}
 }
