@@ -515,14 +515,13 @@ select {
 		justify-content: center;
 		gap: 3rem;
 
-		padding-inline: 3rem;
-		padding-block: 3rem;
-		margin-inline: 3rem;
+		margin: 0rem;
+		padding: 1rem;
 	}
 
 	.product {
 		max-width: 500px;
-		min-width: 400px;
+		min-width: 300px;
 		width: 90%;
 	}
 
