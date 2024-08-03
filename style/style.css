@@ -273,6 +273,7 @@ select {
 	display: flex;
 	justify-content: center;
 	width: 100%;
+	margin-block-start: 4rem;
 }
 
 .footer-fixed {
@@ -289,8 +290,8 @@ select {
 	grid-template-columns: 550px auto;
 	align-items: center;
 	justify-content: center;
-
-	margin: 5rem;
+	gap: 2rem;
+	margin: 3rem;
 	padding: 3rem;
 }
 .product-section:hover {
@@ -513,16 +514,16 @@ select {
 		grid-template-columns: auto;
 		align-items: center;
 		justify-content: center;
-		gap: 3rem;
+		gap: 2rem;
 
-		margin: 0rem;
+		margin-block: 1rem;
 		padding: 1rem;
 	}
 
 	.product {
 		max-width: 500px;
 		min-width: 300px;
-		width: 90%;
+		width: 100%;
 	}
 
 	.product-detail {
