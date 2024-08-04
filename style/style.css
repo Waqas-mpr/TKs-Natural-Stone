@@ -131,16 +131,22 @@ select {
 	margin: auto;
 }
 
+/*-------------------------------*/
+/*  Header Bar Section		   */
+/*------------------------------*/
+
 .header {
 	display: flex;
 	align-items: center;
 	background-color: var(--white);
 	justify-content: space-between;
 	padding-inline: 10rem;
-	padding-block: 1rem;
+	padding-block: 0.75rem;
 	position: fixed;
 	width: 100%;
 	top: 0;
+
+	height: 80px;
 
 	z-index: 9999;
 	box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
@@ -152,11 +158,19 @@ select {
 	position: relative !important;
 }
 .logo {
-	width: 120px;
-	min-width: 100px;
+	width: 100%;
+	max-width: 120px;
+	min-width: 90px;
 }
+
+/*-------------------------------*/
+/*  Main navbar Section		   */
+/*------------------------------*/
+
 .navbar {
+	width: 100%;
 	display: flex;
+	align-items: center;
 	gap: 2rem;
 	list-style: none;
 }
@@ -167,6 +181,7 @@ select {
 	letter-spacing: 0.075rem;
 	text-decoration: none;
 	text-transform: uppercase;
+	height: 100%;
 }
 .navbar li {
 	padding-block: 1rem;
@@ -180,11 +195,16 @@ select {
 	cursor: pointer;
 }
 
+/*-------------------------------*/
+/*  cateory navbar			   */
+/*------------------------------*/
+
 .category-section {
 	margin-inline: auto;
-	margin-block-start: 5.8rem;
+	margin-block-start: 5rem;
 	background: var(--very-dark-blue);
 	padding-block: 1rem;
+	height: 60px;
 }
 
 .category-navbar {
@@ -203,8 +223,7 @@ select {
 	letter-spacing: 1px;
 }
 .category-navbar li {
-	padding-inline: 1rem;
-	/* padding-block: 0.75rem; */
+	padding-inline: 0.75rem;
 }
 
 .category-navbar li a:hover {
@@ -212,6 +231,10 @@ select {
 	border-bottom: 1px solid;
 	border-bottom-color: var(--white);
 }
+
+/*-------------------------------*/
+/*  Products Gallery		  */
+/*------------------------------*/
 
 .products-section {
 	margin-inline: 10rem;
@@ -267,6 +290,10 @@ select {
 	transform: scale(1.1);
 }
 
+/*-------------------------------*/
+/*  Footer Section				  */
+/*------------------------------*/
+
 .footer-section {
 	background-color: var(--very-dark-blue);
 	padding: 20px;
@@ -284,6 +311,10 @@ select {
 	color: var(--white);
 	text-align: center;
 }
+
+/*-------------------------------*/
+/*  Product Detail Page 		 */
+/*------------------------------*/
 
 .product-section {
 	display: grid;
@@ -376,11 +407,6 @@ select {
 	.products {
 		gap: 1.25rem;
 	}
-
-	.navbar li a {
-		font-size: var(--fs-500);
-		font-weight: var(--fw-600);
-	}
 }
 
 @media screen and (min-width: 750px) and (max-width: 920px) {
@@ -402,33 +428,12 @@ select {
 		display: none;
 	}
 
-	.header {
-		padding-block: 1.25rem;
-	}
-
-	.category-section {
-		margin-block-start: 5rem;
-		padding-block: 0.75rem;
-	}
-
-	.logo {
-		width: 90px;
-		min-width: 80px;
-	}
-
 	.category-navbar {
-		gap: 0.75rem;
-	}
-
-	.category-navbar li a {
-		font-size: var(--fs-400);
-		font-weight: var(--fw-400);
-		letter-spacing: 0.5px;
+		gap: 0.25rem;
 	}
 
 	.product-title {
 		font-size: var(--fs-400);
-		line-height: 1.5;
 	}
 	.navbar li {
 		padding-block: 0;
@@ -453,20 +458,12 @@ select {
 		display: none;
 	}
 
-	.category-section {
-		padding-block: 1.5rem;
-		margin-block-start: 4.75rem;
-	}
 	.products {
 		gap: 0.75rem;
 	}
 	.product-title {
 		font-size: var(--fs-400);
 		line-height: 1.5;
-	}
-	.logo {
-		width: 90px;
-		min-width: 80px;
 	}
 }
 
@@ -497,10 +494,6 @@ select {
 	.category-section {
 		padding-block: 1.5rem;
 		margin-block-start: 5rem;
-	}
-	.logo {
-		width: 100px;
-		min-width: 80px;
 	}
 
 	.copywrite {
