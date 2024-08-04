@@ -562,8 +562,66 @@ select {
 	.section {
 		padding-block: 2.5rem;
 	}
+
+	.contact-section {
+		display: grid;
+		grid-template-columns: auto;
+		gap: 2rem;
+	}
 }
 
+/*-------------------------------*/
+/*  Contact Us				   */
+/*------------------------------*/
+.contact-section {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 5rem;
+
+	align-items: center;
+}
+
+.contact-info {
+	max-width: 400px;
+	width: auto;
+	padding-block-end: 3rem;
+}
+
+.contact-top-heading {
+	font-size: var(--fs-700);
+	color: var(--very-dark-blue);
+	letter-spacing: 0.05rem;
+	text-align: left;
+	text-decoration: underline;
+	padding-block-end: 2rem;
+	text-transform: uppercase;
+}
+
+.contact-heading {
+	font-size: var(--fs-500);
+	font-weight: var(--fw-700);
+	line-height: 2;
+}
+.contact-text {
+	font-size: var(--fs-400);
+	font-weight: var(--fw-400);
+	line-height: 2;
+}
+
+@media screen and (max-width: 920px) {
+	.contact-section {
+		display: grid;
+		grid-template-columns: auto;
+		gap: 2rem;
+		align-content: center;
+		justify-content: center;
+	}
+
+	.map {
+		max-width: 400px;
+		width: auto;
+	}
+}
 /*-------------------------------*/
 /*  Responsive Media Qureries   */
 /*------------------------------*/
