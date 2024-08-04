@@ -198,7 +198,7 @@ select {
 	color: var(--white);
 	text-decoration: none;
 
-	font-size: var(--fs-500);
+	font-size: var(--fs-400);
 	text-transform: uppercase;
 	letter-spacing: 1px;
 }
