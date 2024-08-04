@@ -167,7 +167,7 @@ select {
 /*  Main navbar Section		   */
 /*------------------------------*/
 
-.navbar {
+/* .navbar {
 	width: 100%;
 	display: flex;
 	align-items: center;
@@ -193,6 +193,69 @@ select {
 .navbar li a:hover {
 	color: var(--soft-red);
 	cursor: pointer;
+} */
+
+.main-nav {
+	height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: var(--white);
+	position: relative;
+	padding-inline: 5rem;
+}
+
+.main-nav ul {
+	display: flex;
+	gap: 3rem;
+}
+
+.main-nav ul li {
+	list-style-type: none;
+}
+
+.main-nav ul li a {
+	text-decoration: none;
+	font-size: var(--fs-600);
+	color: var(--very-dark-blue);
+}
+
+.menu-icon {
+	display: none;
+}
+
+.closed-icon {
+	display: none;
+}
+
+.display-none {
+	display: none;
+}
+
+@media (max-width: 920px) {
+	.main-nav ul {
+		position: absolute;
+		top: 80px;
+		left: 0;
+		right: 0;
+		height: 100vh;
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+		background-color: var(--white);
+
+		overflow: hidden;
+		z-index: 99999;
+		width: 100%;
+		gap: 1rem;
+
+		box-shadow: 0px 3px 3x 0px rgba(0, 0, 0, 0.12);
+	}
+
+	.menu-icon {
+		display: block;
+	}
 }
 
 /*-------------------------------*/
@@ -201,7 +264,7 @@ select {
 
 .category-section {
 	margin-inline: auto;
-	margin-block-start: 5rem;
+	/* margin-block-start: 5rem; */
 	background: var(--very-dark-blue);
 	padding-block: 1rem;
 	height: 60px;
@@ -424,9 +487,9 @@ select {
 		gap: 1rem;
 	}
 
-	.navbar {
+	/* .main-nav ul {
 		display: none;
-	}
+	} */
 
 	.category-navbar {
 		gap: 0.25rem;
@@ -434,9 +497,6 @@ select {
 
 	.product-title {
 		font-size: var(--fs-400);
-	}
-	.navbar li {
-		padding-block: 0;
 	}
 }
 
@@ -451,9 +511,7 @@ select {
 	.product-card {
 		max-width: 220px;
 	}
-	.navbar {
-		display: none;
-	}
+
 	.category-navbar {
 		display: none;
 	}
@@ -484,16 +542,13 @@ select {
 		font-size: var(--fs-500);
 		line-height: 2;
 	}
-	.navbar {
-		display: none;
-	}
+
 	.category-navbar {
 		display: none;
 	}
 
 	.category-section {
 		padding-block: 1.5rem;
-		margin-block-start: 5rem;
 	}
 
 	.copywrite {
