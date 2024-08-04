@@ -575,7 +575,7 @@ select {
 /*------------------------------*/
 .contact-section {
 	display: grid;
-	grid-template-columns: auto 1fr;
+	grid-template-columns: 1fr 1fr;
 	gap: 5rem;
 
 	align-items: center;
@@ -607,18 +607,22 @@ select {
 	font-weight: var(--fw-400);
 	line-height: 2;
 }
-.map {
-	width: 50vw;
-}
 
 @media screen and (max-width: 920px) {
 	.contact-section {
 		display: grid;
-		grid-template-columns: auto;
-		gap: 2rem;
+		grid-template-columns: 1fr;
+		gap: 0rem;
 		align-content: center;
 		justify-content: center;
 	}
+
+	.contact-info {
+		padding: 3rem;
+	}
+}
+.map {
+	overflow: hidden;
 }
 /*-------------------------------*/
 /*  Responsive Media Qureries   */
