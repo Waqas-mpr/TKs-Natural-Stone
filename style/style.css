@@ -545,13 +545,13 @@ select {
 	.about-section {
 		grid-template-columns: auto;
 		gap: 3rem;
-		padding-inline: 5rem;
+		padding-inline: 2rem;
 		padding-block: 2rem;
 		align-items: center;
 	}
 
 	.about-title-caption {
-		max-width: 500px;
+		max-width: 550px;
 		width: auto;
 		margin: auto;
 		font-size: var(--fs-400);
