@@ -1,16 +1,21 @@
 let menuList = document.getElementById("menuList");
-let menuIcon = document.getElementById("menu-icon");
-let closedIcon = document.getElementById("closed-icon");
+let categoryMenuList = document.getElementById("categoryMenuList");
 
 menuList.style.maxHeight = "0px";
+categoryMenuList.style.maxHeight = "0px";
 
-function toggleMenu() {
+function toggleMainMenu() {
 	if (menuList.style.maxHeight == "0px") {
 		menuList.style.maxHeight = "300px";
 	} else {
 		menuList.style.maxHeight = "0px";
 	}
-	// if (menuList.classList.contains("display-none")) {
-	//     menuList.add
-	// } else alert("added");
+}
+
+function toggleCategoryMenu() {
+	if (categoryMenuList.style.maxHeight == "0px") {
+		categoryMenuList.style.maxHeight = "300px";
+	} else {
+		categoryMenuList.style.maxHeight = "0px";
+	}
 }
