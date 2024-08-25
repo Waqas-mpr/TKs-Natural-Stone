@@ -165,8 +165,8 @@ select {
 }
 .logo {
 	width: 100%;
-	max-width: 120px;
-	min-width: 90px;
+	max-width: 110px;
+	min-width: 80px;
 }
 .header-setion {
 	display: flex;
