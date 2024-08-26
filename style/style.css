@@ -157,6 +157,14 @@ select {
 	z-index: 9999;
 	box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
 }
+
+.display-none{
+	display: none;
+}
+
+.display-block{
+	display: block;
+}
 .remove-shadow {
 	box-shadow: none !important;
 }
@@ -570,13 +578,16 @@ select {
 .certification-logo{
 	display: flex;
 	justify-content: center;
-	gap: 4rem;
-	padding-block-end: 5rem;
+	gap: 3rem;
+	padding-block: 3rem;
+	padding-inline:3rem;
 
 }
 
 .certification-logo img{
-	width:350px;
+	max-width:220px;
+	min-width: 100px;
+	width: 100%;
 	height: auto;
 }
 
@@ -760,9 +771,15 @@ select {
 }
 
 @media screen and (min-width: 280px) and (max-width: 599px) {
+
+
+	.hero .display-block{display: none;}
+	.hero .display-none{display: block;}
 	.header {
 		padding-inline: 2rem;
 	}
+
+	
 
 	.products-section {
 		margin-inline: 2rem;
