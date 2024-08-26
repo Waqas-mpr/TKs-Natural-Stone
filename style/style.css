@@ -133,7 +133,7 @@ select {
 }
 
 .max-width-1700px{
-	max-width: 1400px;
+	max-width: 1550px;
 	margin: auto;
 }
 
@@ -509,7 +509,7 @@ select {
 /*------------------------------*/
 
 .wrapper {
-	padding-inline: 2rem;
+	/* padding-inline: 1rem; */
 }
 
 .hero img {
@@ -554,7 +554,7 @@ select {
 	/* margin-inline:7rem; */
 	font-size: var(--fs-500);
 	text-align: justify;
-	margin-block-start: 2.5rem;
+	margin-block: 1.75rem;
 }
 .about-title-caption {
 	/* max-width:950px;
@@ -564,6 +564,7 @@ select {
 
 	font-size: var(--fs-400);
 	text-align: justify;
+	line-height: 1.5rem;
 	margin-block: 0.5rem;
 }
 
@@ -594,6 +595,8 @@ select {
 .margin-bottom-section{
 	margin-block-end:5rem;
 }
+
+
 @media screen and (max-width: 1120px) {
 	.about-section {
 		grid-template-columns: auto;
@@ -702,6 +705,8 @@ select {
 /*------------------------------*/
 
 @media screen and (min-width: 921px) and (max-width: 1378px) {
+
+
 	.header {
 		padding-inline: 3rem;
 	}
@@ -746,6 +751,11 @@ select {
 }
 
 @media screen and (min-width: 600px) and (max-width: 749px) {
+
+	.title-home {
+		font-size: var(--fs-600);
+	
+	}
 	.header {
 		padding-inline: 1rem;
 	}
@@ -780,6 +790,10 @@ select {
 	}
 
 	
+	.title-home {
+		font-size: var(--fs-500);
+	
+	}
 
 	.products-section {
 		margin-inline: 2rem;
